@@ -5,52 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI-BioX | Global ConfEx Platform</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Pretendard, sans-serif;
-      background: #0d0f13; /* 다크모드 배경 */
-      color: #e8ecf1;      /* 기본 글자색 */
-      text-align: center;
+    :root{
+      --bg: #0d0f13;
+      --panel:#12151b;
+      --text:#e8ecf1;
+      --muted:#a8b3c4;
+      --brand:#1E96E1;
+      --brand-2:#cf007f;
+      --line:#1b2029;
     }
-    header {
-      background: #000;
-      padding: 16px;
-    }
-    header h1 {
-      margin: 0;
-      color: #1E96E1; /* 포인트 블루 */
-    }
-    .hero {
-      padding: 80px 20px;
-    }
-    .hero h2 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      color: #a8b3c4;
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .btn-primary { background:#1E96E1; color:#fff; }
-    .btn-outline { border:1px solid #1E96E1; color:#1E96E1; }
-    .btn-text { color:#e8ecf1; }
-    footer {
-      background:#06080c;
-      padding:20px;
-      margin-top:40px;
-      color:#a8b3c4;
-      font-size:14px;
-    }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial, Pretendard,sans-serif}
+    a{text-decoration:none;color:var(--brand)}
+    header{background:#000;padding:16px;text-align:center}
+    header h1{margin:0;color:var(--brand)}
+    .hero{padding:80px 20px;text-align:center}
+    .hero h2{font-size:40px;margin-bottom:20px}
+    .hero p{color:var(--muted);font-size:18px;margin-bottom:12px}
+    .btn{display:inline-block;margin:8px;padding:12px 20px;border-radius:8px;font-weight:bold;transition:.2s}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-outline{border:1px solid var(--brand);color:var(--brand)}
+    .btn-text{color:var(--text)}
+    section{padding:60px 20px}
+    .section__title{font-size:28px;margin-bottom:20px;text-align:center}
+    .themes,.programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--panel);padding:20px;border-radius:12px;border:1px solid var(--line)}
+    .card h4{margin-top:0}
+    .bullets{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .newsletter{display:flex;gap:10px;justify-content:center;margin-top:14px}
+    .newsletter input{flex:1;min-width:200px;padding:12px;border-radius:8px;border:1px solid var(--line);background:#0b0e13;color:var(--text)}
+    footer{background:#06080c;padding:20px;text-align:center;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
@@ -58,6 +41,7 @@
     <h1>AI-BioX</h1>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <p>2025년 12월 11일(목) – 13일(토), COEX</p>
     <h2>AI, Bio, Contents, Digital Wellness<br>혁신 ConfEx</h2>
@@ -69,6 +53,79 @@
     </div>
   </section>
 
+  <!-- CONFERENCE THEMES -->
+  <section id="conference">
+    <h2 class="section__title">Conference Main Theme</h2>
+    <div class="themes">
+      <div class="card">
+        <h4>AI</h4>
+        <ul class="bullets">
+          <li>Gen AI & LLM</li>
+          <li>AI Transformation</li>
+          <li>Data Governance in AI</li>
+          <li>Robotics – AI Convergence</li>
+          <li>Global Dynamics of AI</li>
+          <li>Industrial Applications of AI</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>BIO</h4>
+        <ul class="bullets">
+          <li>AI Drug Discovery</li>
+          <li>Precision Genomics</li>
+          <li>AI in Bioinformatics</li>
+          <li>Global Bioeconomy</li>
+          <li>Biotech Entrepreneurship</li>
+          <li>Global Biomedical Collaboration</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>CONTENTS</h4>
+        <ul class="bullets">
+          <li>Contents Industry Outlook</li>
+          <li>AI-Driven Creation</li>
+          <li>Platform & OTT Strategies</li>
+          <li>Metaverse / VR / AR</li>
+          <li>Policies for Content Platforms</li>
+          <li>Expansion of K-Contents</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>WELLNESS</h4>
+        <ul class="bullets">
+          <li>Digital Mental Healthcare</li>
+          <li>Wearable Biosensing</li>
+          <li>Public Health in Digital Era</li>
+          <li>Institutional Wellness Program</li>
+          <li>Tech and Aging Society</li>
+          <li>Longevity & Health Tech</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="program">
+    <h2 class="section__title">AI-BioX Programs</h2>
+    <div class="programs">
+      <div class="card"><h4># 멘토링 프로그램</h4><p>글로벌 멘토링 & 차세대 과학자 육성</p></div>
+      <div class="card"><h4># 포스터 세션</h4><p>연구자 성과 발표와 아이디어 확산</p></div>
+      <div class="card"><h4># IR 피칭</h4><p>스타트업과 투자자 연결, 혁신 비즈니스 무대</p></div>
+      <div class="card"><h4># 시상식</h4><p>AI·Bio 융합 우수 성과 시상</p></div>
+      <div class="card"><h4># 네트워킹</h4><p>석학·기업·정책 리더 교류</p></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <h2 class="section__title">Newsletter</h2>
+    <form class="newsletter" onsubmit="event.preventDefault();alert('구독 신청 완료!')">
+      <input type="email" placeholder="이메일 주소 입력" required>
+      <button class="btn btn-primary" type="submit">구독하기</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     © 2025 ECOMICE · K-BioX 운영위원회
   </footer>
